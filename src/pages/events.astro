@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="イベント">
+<style is:global>
+.event-list { max-width: var(--wide); margin: 0 auto; padding: 0 0 6rem; }
+.event-card { display: grid; grid-template-columns: 340px 1fr; border-bottom: 0.5px solid var(--paper-dark); cursor: pointer; transition: background 0.2s; }
+.event-card:hover { background: var(--paper-mid); }
+.event-card:hover .ev-img img { transform: scale(1.03); }
+.ev-img { overflow: hidden; background: var(--paper-dark); aspect-ratio: 4/3; }
+.ev-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+.ev-body { padding: 2rem 2rem 2rem 2.5rem; display: flex; flex-direction: column; border-left: 0.5px solid var(--paper-dark); }
+.ev-date-badge { display: inline-flex; align-items: baseline; gap: 6px; margin-bottom: 1rem; }
+.ev-date-main { font-size: 22px; font-weight: 400; color: var(--ink); letter-spacing: 0.04em; }
+.ev-date-sub { font-size: 12px; color: var(--ink-faint); letter-spacing: 0.06em; }
+.ev-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.ev-tag { font-size: 10px; font-weight: 400; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 2px; }
+.ev-tag-type { background: var(--ink); color: var(--paper); }
+.ev-tag-area { background: var(--paper-mid); color: var(--ink-light); border: 0.5px solid var(--paper-dark); }
+.ev-tag-live { background: var(--ink-mid); color: var(--paper); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+.ev-title { font-size: 20px; font-weight: 400; color: var(--ink); line-height: 1.5; letter-spacing: 0.04em; margin-bottom: 0.75rem; }
+.ev-desc { font-size: 13px; font-weight: 300; color: var(--ink-light); line-height: 1.85; letter-spacing: 0.02em; margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ev-meta { display: flex; flex-direction: column; gap: 6px; margin-top: auto; padding-top: 1.25rem; border-top: 0.5px solid var(--paper-dark); }
+.ev-meta-row { display: flex; gap: 1rem; align-items: baseline; }
+.ev-meta-label { font-size: 10px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); text-transform: uppercase; min-width: 48px; flex-shrink: 0; }
+.ev-meta-value { font-size: 13px; font-weight: 300; color: var(--ink-mid); letter-spacing: 0.02em; }
+.ev-read-more { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); margin-top: 1.25rem; border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 2px; width: fit-content; transition: color 0.2s; }
+.event-card:hover .ev-read-more { color: var(--ink); border-color: var(--ink-light); }
+.ev-expiry { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-top: 0.5rem; }
+.empty-state { max-width: var(--wide); margin: 0 auto; padding: 6rem 1.25rem; text-align: center; }
+.empty-state-text { font-size: 15px; font-weight: 300; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+.empty-state-sub { font-size: 13px; font-weight: 300; color: var(--ink-faint); letter-spacing: 0.02em; line-height: 1.8; }
+@media (max-width: 760px) {
+  .event-card { grid-template-columns: 1fr; }
+  .ev-img { aspect-ratio: 16/9; }
+  .ev-body { padding: 1.25rem; border-left: none; border-top: 0.5px solid var(--paper-dark); }
+}
+</style>
+
+<div class="page-header">
+  <div class="page-eyebrow">Events</div>
+  <h1 class="page-title">イベント</h1>
+  <p class="page-desc">林業体験ツアー、古民家再生ワークショップ、建築家・職人によるトークイベント——山と都市を繋ぐ場をここに集めます。</p>
+  <div class="page-count">2 events</div>
+</div>
+
+<div class="event-list">
+  <a href="#" class="event-card fade-in">
+    <div class="ev-img"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=70" alt=""></div>
+    <div class="ev-body">
+      <div class="ev-date-badge"><span class="ev-date-main">2024.04.13 – 14</span><span class="ev-date-sub">土・日</span></div>
+      <div class="ev-tags"><span class="ev-tag ev-tag-live">開催中</span><span class="ev-tag ev-tag-type">体験</span><span class="ev-tag ev-tag-area">岐阜県</span></div>
+      <div class="ev-title">郡上の山に入る、一泊二日の林業体験ツアー</div>
+      <div class="ev-desc">間伐作業の見学と体験、製材所の見学、地元の林業家との交流。山の現場を自分の目で見て、手で触れる2日間。定員8名の小さなツアーです。</div>
+      <div class="ev-meta">
+        <div class="ev-meta-row"><span class="ev-meta-label">場所</span><span class="ev-meta-value">岐阜県郡上市（現地集合）</span></div>
+        <div class="ev-meta-row"><span class="ev-meta-label">参加費</span><span class="ev-meta-value">18,000円（宿泊・食事込み）</span></div>
+        <div class="ev-meta-row"><span class="ev-meta-label">定員</span><span class="ev-meta-value">8名（残り3名）</span></div>
+      </div>
+      <span class="ev-read-more">詳しく見る</span>
+      <div class="ev-expiry">掲載期限：2024年4月14日まで</div>
+    </div>
+  </a>
+  <a href="#" class="event-card fade-in">
+    <div class="ev-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+    <div class="ev-body">
+      <div class="ev-date-badge"><span class="ev-date-main">2024.04.20</span><span class="ev-date-sub">土</span></div>
+      <div class="ev-tags"><span class="ev-tag ev-tag-type">トーク</span><span class="ev-tag ev-tag-area">東京都</span></div>
+      <div class="ev-title">木材と建築家——国産材を使い続ける理由</div>
+      <div class="ev-desc">国産材にこだわって設計を続ける建築家2名と、材木屋1名によるトークイベント。木を選ぶ目線、産地との付き合い方を語ります。</div>
+      <div class="ev-meta">
+        <div class="ev-meta-row"><span class="ev-meta-label">場所</span><span class="ev-meta-value">渋谷区某所（申込後に案内）</span></div>
+        <div class="ev-meta-row"><span class="ev-meta-label">参加費</span><span class="ev-meta-value">2,000円（ドリンク付き）</span></div>
+        <div class="ev-meta-row"><span class="ev-meta-label">定員</span><span class="ev-meta-value">30名</span></div>
+      </div>
+      <span class="ev-read-more">詳しく見る</span>
+      <div class="ev-expiry">掲載期限：2024年4月20日まで</div>
+    </div>
+  </a>
+</div>
+</Layout>

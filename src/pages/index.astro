@@ -1,11 +1,208 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<Layout title="UNDERCURRENT">
 
-<Layout>
-	<Welcome />
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80" alt="">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Latest</div>
+    <h1 class="hero-title">この椅子の木材は、<br>どこから来たのか</h1>
+    <p class="hero-lead">東京のあるインテリアショップで出会った一脚の椅子。その木材の産地を辿ると、岐阜の山奥に行き着いた。</p>
+    <div class="hero-bottom">
+      <div class="hero-tags">
+        <span class="htag htag-entry">プロダクト</span>
+        <span class="htag htag-issue">木材</span>
+      </div>
+      <a href="#" class="hero-read-more">記事を読む <span class="hero-arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT ARTICLES -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-title">Recent Articles</span>
+    <a href="#" class="section-link">すべて見る</a>
+  </div>
+  <div class="article-grid">
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">江戸の建築を支えた、奥多摩の森の話</div>
+        <div class="card-lead">現代の住宅地として知られる奥多摩は、かつて江戸の建築需要を支えた木材の産地だった。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">山</span><span class="card-date">2024.02.28</span></div>
+      </div>
+    </a>
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">岐阜の製材所で聞いた、山が静かになった理由</div>
+        <div class="card-lead">人口2000人の山間の町に、三代続く製材所がある。その三代目が語った、山の現在地。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">人</span><span class="tsm tsm-issue">林業</span><span class="card-date">2024.02.10</span></div>
+      </div>
+    </a>
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">CLTが変えようとしているもの、変えられないもの</div>
+        <div class="card-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span><span class="card-date">2024.01.22</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- 求人ピックアップ -->
+<div class="job-pickup fade-in">
+  <div class="section-header">
+    <span class="section-title">Jobs</span>
+    <a href="/jobs" class="section-link">すべて見る</a>
+  </div>
+  <div>
+    <a href="#" class="job-pickup-item">
+      <div class="jp-img"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=70" alt=""></div>
+      <div class="jp-body">
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">林業</span><span class="jp-tag jp-tag-area">岐阜県</span></div>
+        <div class="jp-org">有限会社 奥山林業</div>
+        <div class="jp-title">木を育て、山を守る。林業作業士を募集</div>
+        <div class="jp-story">「木を切る仕事だと思って来たら、木を育てる仕事だった」——ここで働くスタッフが口を揃えて言う。</div>
+        <div class="jp-location">岐阜県郡上市 / 月給 22万円〜</div>
+      </div>
+    </a>
+    <a href="#" class="job-pickup-item">
+      <div class="jp-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=400&q=70" alt=""></div>
+      <div class="jp-body">
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">製材</span><span class="jp-tag jp-tag-area">長野県</span></div>
+        <div class="jp-org">丸木製材所</div>
+        <div class="jp-title">木の声を聞く職人。製材スタッフ募集</div>
+        <div class="jp-story">丸太が板になる瞬間がある。鋸が入り、木目が現れる。その瞬間に立ち会える仕事が製材だ。</div>
+        <div class="jp-location">長野県諏訪市 / 月給 20万円〜</div>
+      </div>
+    </a>
+    <a href="#" class="job-pickup-item">
+      <div class="jp-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=70" alt=""></div>
+      <div class="jp-body">
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">森林管理</span><span class="jp-tag jp-tag-area">奈良県</span></div>
+        <div class="jp-org">吉野林業組合</div>
+        <div class="jp-title">400年の山と向き合う。森林施業プランナー募集</div>
+        <div class="jp-story">吉野杉は日本を代表するブランド材だ。その山を未来に繋いでいくために、橋渡しをする人を求めている。</div>
+        <div class="jp-location">奈良県吉野郡 / 月給 25万円〜</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- 空き家ピックアップ -->
+<div class="prop-pickup fade-in">
+  <div class="section-header">
+    <span class="section-title">Properties</span>
+    <a href="/properties" class="section-link">すべて見る</a>
+  </div>
+  <div class="prop-pickup-grid">
+    <a href="#" class="prop-pickup-card">
+      <div class="pp-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=70" alt=""></div>
+      <div class="pp-body">
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">岐阜県</span><span class="pp-tag pp-tag-type">古民家</span></div>
+        <div class="pp-title">製材所の隣に建つ、明治期の庄屋屋敷</div>
+        <div class="pp-price">580万円<span class="pp-price-note">要リノベーション</span></div>
+      </div>
+    </a>
+    <a href="#" class="prop-pickup-card">
+      <div class="pp-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70" alt=""></div>
+      <div class="pp-body">
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">長野県</span><span class="pp-tag pp-tag-type">古民家</span></div>
+        <div class="pp-title">諏訪湖を望む丘に建つ、大正期の木造住宅</div>
+        <div class="pp-price">320万円<span class="pp-price-note">現状渡し</span></div>
+      </div>
+    </a>
+    <a href="#" class="prop-pickup-card">
+      <div class="pp-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+      <div class="pp-body">
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">奈良県</span><span class="pp-tag pp-tag-type">町家</span></div>
+        <div class="pp-title">吉野杉の町並みに残る、江戸末期の商家</div>
+        <div class="pp-price">450万円<span class="pp-price-note">要一部補修</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- カテゴリ別：建築 -->
+<div class="section fade-in">
+  <div class="section-header">
+    <span class="section-title">建築</span>
+    <a href="/category/architecture" class="section-link">すべて見る</a>
+  </div>
+  <div class="article-grid">
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">大工が木を選ぶとき、何を見ているか</div>
+        <div class="card-lead">木材を手で触れ、目で確かめる。熟練の大工が語る「良い木」の条件は、山の管理状態と直結していた。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">職人</span><span class="card-date">2024.01.22</span></div>
+      </div>
+    </a>
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">CLTが変えようとしているもの、変えられないもの</div>
+        <div class="card-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span><span class="card-date">2024.01.08</span></div>
+      </div>
+    </a>
+    <a href="#" class="article-card">
+      <div class="card-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=70" alt=""></div>
+      <div class="card-body">
+        <div class="card-title">数寄屋建築と山の関係——茶室が求めた木とは</div>
+        <div class="card-lead">侘び寂びを体現する数寄屋建築。その繊細な意匠を支えていたのは、特定の山の特定の木だった。</div>
+        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">歴史</span><span class="card-date">2023.12.18</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- CATEGORIES NAV -->
+<div class="cat-nav fade-in">
+  <div class="section-header">
+    <span class="section-title">Categories</span>
+  </div>
+  <div class="cat-grid">
+    <a href="/category/architecture" class="cat-item"><div class="cat-name">建築</div><div class="cat-desc">設計と材の間にある、見えない流れ</div><div class="cat-count">6 articles</div></a>
+    <a href="/category/product" class="cat-item"><div class="cat-name">プロダクト</div><div class="cat-desc">物の来歴を辿ると、山に行き着く</div><div class="cat-count">4 articles</div></a>
+    <a href="/category/history" class="cat-item"><div class="cat-name">歴史</div><div class="cat-desc">過去の山と都市の関係から学ぶ</div><div class="cat-count">5 articles</div></a>
+    <a href="/category/people" class="cat-item"><div class="cat-name">人</div><div class="cat-desc">山に関わる人たちの言葉と仕事</div><div class="cat-count">7 articles</div></a>
+    <a href="/category/material" class="cat-item"><div class="cat-name">素材</div><div class="cat-desc">木の種類、産地、質感の話</div><div class="cat-count">3 articles</div></a>
+  </div>
+</div>
+
+<script>
+  // ヘッダー透過（ヒーロー上のみ）
+  const header = document.querySelector('.site-header') as HTMLElement;
+  if (header) {
+    header.style.background = 'transparent';
+    header.style.borderBottomColor = 'transparent';
+    const logo = header.querySelector('img') as HTMLImageElement;
+    if (logo) logo.style.filter = 'brightness(0) invert(1)';
+    const spans = header.querySelectorAll('.hamburger span') as NodeListOf<HTMLElement>;
+    spans.forEach(s => s.style.background = '#fff');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight - 80) {
+        header.style.background = '#F8F7F4';
+        header.style.borderBottomColor = 'var(--paper-dark)';
+        if (logo) logo.style.filter = '';
+        spans.forEach(s => s.style.background = '');
+      } else {
+        header.style.background = 'transparent';
+        header.style.borderBottomColor = 'transparent';
+        if (logo) logo.style.filter = 'brightness(0) invert(1)';
+        spans.forEach(s => s.style.background = '#fff');
+      }
+    }, { passive: true });
+  }
+</script>
+
 </Layout>

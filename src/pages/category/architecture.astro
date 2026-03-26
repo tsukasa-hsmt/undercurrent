@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="建築">
+
+<style is:global>
+.page-header { max-width: var(--wide); margin: 0 auto; padding: 4rem 1.25rem 3rem; border-bottom: 0.5px solid var(--paper-dark); }
+.page-eyebrow { font-size: 10px; font-weight: 400; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.75rem; }
+.page-title { font-size: clamp(28px,4vw,44px); font-weight: 400; color: var(--ink); letter-spacing: 0.06em; line-height: 1.3; margin-bottom: 1.25rem; }
+.page-desc { font-size: 15px; font-weight: 300; color: var(--ink-light); line-height: 1.9; max-width: 560px; letter-spacing: 0.02em; }
+.page-count { margin-top: 1.5rem; font-size: 11px; color: var(--ink-faint); letter-spacing: 0.08em; }
+
+.tag-link { font-size: 10px; font-weight: 400; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 2px; transition: opacity 0.2s; display: inline-block; cursor: pointer; }
+.tag-link:hover { opacity: 0.65; }
+.tag-entry { background: var(--paper-mid); color: var(--ink-light); border: 0.5px solid var(--paper-dark); }
+.tag-issue  { background: var(--ink); color: var(--paper); }
+
+/* PC: 3カラムグリッド */
+.article-grid-cat { max-width: var(--wide); margin: 0 auto; padding: 3rem 0 6rem; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; }
+
+/* スマホ: noteスタイルリスト */
+.article-list { display: none; }
+.article-list-item { display: flex; gap: 1rem; align-items: stretch; padding: 1rem; border-bottom: 0.5px solid var(--paper-dark); transition: background 0.2s; }
+.article-list-item:first-child { border-top: 0.5px solid var(--paper-dark); }
+.article-list-item:active { background: var(--paper-mid); }
+.list-img { width: 80px; flex-shrink: 0; overflow: hidden; background: var(--paper-dark); border-radius: 3px; }
+.list-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.list-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.list-title { font-size: 14px; font-weight: 400; color: var(--ink); line-height: 1.2; letter-spacing: 0.02em; margin-bottom: 0.4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.list-lead { font-size: 11px; font-weight: 300; color: var(--ink-light); line-height: 1.65; letter-spacing: 0.01em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0.5rem; }
+.list-meta { display: flex; align-items: flex-end; gap: 6px; flex-wrap: wrap; margin-top: auto; }
+.list-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-left: auto; }
+
+@media (max-width: 900px) { .article-grid-cat { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 600px) {
+  .page-header { padding: 2.5rem 1.25rem 2rem; }
+  .article-grid-cat { display: none; }
+  .article-list { display: block; }
+}
+</style>
+
+<div class="page-header">
+  <div class="page-eyebrow">Category</div>
+  <h1 class="page-title">建築</h1>
+  <p class="page-desc">建物は、木材の行き着く先のひとつだ。設計者の意図、職人の技、そして材の産地——建築という入口から、山と都市の見えない繋がりを辿る。</p>
+  <div class="page-count">6 articles</div>
+</div>
+
+<!-- PC: グリッド -->
+<div class="article-grid-cat">
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">この椅子の木材は、どこから来たのか</div>
+      <div class="card-lead">東京のあるインテリアショップで出会った一脚の椅子。その木材の産地を辿ると、岐阜の山奥に行き着いた。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">木材</span><span class="card-date">2024.03.15</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">江戸の建築を支えた、奥多摩の森の話</div>
+      <div class="card-lead">現代の住宅地として知られる奥多摩は、かつて江戸の建築需要を支えた木材の産地だった。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">山</span><span class="card-date">2024.02.28</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">CLTが変えようとしているもの、変えられないもの</div>
+      <div class="card-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">林業</span><span class="card-date">2024.02.10</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">大工が木を選ぶとき、何を見ているか</div>
+      <div class="card-lead">木材を手で触れ、目で確かめる。熟練の大工が語る「良い木」の条件は、山の管理状態と直結していた。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">職人</span><span class="card-date">2024.01.22</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">木造建築が再評価される時代に、山は追いつけるか</div>
+      <div class="card-lead">都市部での木造建築ブームが続く一方、材の供給側である山の現状は厳しいままだ。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">木材</span><span class="card-date">2024.01.08</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-card fade-in">
+    <div class="card-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=70" alt=""></div>
+    <div class="card-body">
+      <div class="card-title">数寄屋建築と山の関係——茶室が求めた木とは</div>
+      <div class="card-lead">侘び寂びを体現する数寄屋建築。その繊細な意匠を支えていたのは、特定の山の特定の木だった。</div>
+      <div class="card-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">歴史</span><span class="card-date">2023.12.18</span></div>
+    </div>
+  </a>
+</div>
+
+<!-- スマホ: リスト -->
+<div class="article-list">
+  <a href="#" class="article-list-item fade-in">
+    <div class="list-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=200&q=70" alt=""></div>
+    <div class="list-body">
+      <div class="list-title">この椅子の木材は、どこから来たのか</div>
+      <div class="list-lead">東京のあるインテリアショップで出会った一脚の椅子。その木材の産地を辿ると、岐阜の山奥に行き着いた。</div>
+      <div class="list-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">木材</span><span class="list-date">2024.03.15</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-list-item fade-in">
+    <div class="list-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=70" alt=""></div>
+    <div class="list-body">
+      <div class="list-title">江戸の建築を支えた、奥多摩の森の話</div>
+      <div class="list-lead">現代の住宅地として知られる奥多摩は、かつて江戸の建築需要を支えた木材の産地だった。</div>
+      <div class="list-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">山</span><span class="list-date">2024.02.28</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-list-item fade-in">
+    <div class="list-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&q=70" alt=""></div>
+    <div class="list-body">
+      <div class="list-title">CLTが変えようとしているもの、変えられないもの</div>
+      <div class="list-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
+      <div class="list-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">林業</span><span class="list-date">2024.02.10</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-list-item fade-in">
+    <div class="list-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&q=70" alt=""></div>
+    <div class="list-body">
+      <div class="list-title">大工が木を選ぶとき、何を見ているか</div>
+      <div class="list-lead">木材を手で触れ、目で確かめる。熟練の大工が語る「良い木」の条件は、山の管理状態と直結していた。</div>
+      <div class="list-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">職人</span><span class="list-date">2024.01.22</span></div>
+    </div>
+  </a>
+  <a href="#" class="article-list-item fade-in">
+    <div class="list-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=200&q=70" alt=""></div>
+    <div class="list-body">
+      <div class="list-title">木造建築が再評価される時代に、山は追いつけるか</div>
+      <div class="list-lead">都市部での木造建築ブームが続く一方、材の供給側である山の現状は厳しいままだ。</div>
+      <div class="list-meta"><span class="tag-link tag-entry">建築</span><span class="tag-link tag-issue">木材</span><span class="list-date">2024.01.08</span></div>
+    </div>
+  </a>
+</div>
+
+</Layout>

@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="About">
+<style is:global>
+.about-hero { max-width: 640px; margin: 0 auto; padding: 6rem 2.5rem 5rem; border-bottom: 0.5px solid var(--paper-dark); }
+.about-eyebrow { font-size: 10px; font-weight: 400; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 2rem; }
+.about-lead { font-size: clamp(22px,3.5vw,32px); font-weight: 400; line-height: 1.75; color: var(--ink); letter-spacing: 0.04em; }
+.concept-section { max-width: 640px; margin: 0 auto; padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--paper-dark); }
+.concept-section p { font-size: 16px; font-weight: 300; line-height: 2.1; letter-spacing: 0.03em; color: var(--ink-mid); margin-bottom: 1.75rem; }
+.concept-section p:last-child { margin-bottom: 0; }
+.concept-section p strong { font-weight: 400; color: var(--ink); }
+.profile-section { max-width: 640px; margin: 0 auto; padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--paper-dark); }
+.section-label-sm { font-size: 10px; font-weight: 400; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 2rem; }
+.profile-inner { display: flex; gap: 2rem; align-items: flex-start; }
+.profile-avatar { width: 80px; height: 80px; flex-shrink: 0; border-radius: 50%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink-faint); }
+.profile-name { font-size: 16px; font-weight: 400; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 0.25rem; }
+.profile-name-en { font-size: 11px; color: var(--ink-faint); letter-spacing: 0.1em; margin-bottom: 1rem; }
+.profile-bio { font-size: 14px; font-weight: 300; color: var(--ink-light); line-height: 1.85; letter-spacing: 0.02em; }
+.contact-section { max-width: 640px; margin: 0 auto; padding: 4rem 2.5rem 6rem; }
+.contact-intro { font-size: 15px; font-weight: 300; color: var(--ink-light); line-height: 1.85; letter-spacing: 0.02em; margin-bottom: 2.5rem; }
+.contact-types { display: flex; flex-direction: column; gap: 0; margin-bottom: 3rem; }
+.contact-type { padding: 1.25rem 0; border-bottom: 0.5px solid var(--paper-dark); }
+.contact-type:first-child { border-top: 0.5px solid var(--paper-dark); }
+.contact-type-name { font-size: 13px; font-weight: 400; color: var(--ink); letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+.contact-type-desc { font-size: 13px; font-weight: 300; color: var(--ink-light); line-height: 1.8; letter-spacing: 0.02em; }
+.contact-form-wrap { border: 0.5px solid var(--paper-dark); border-radius: 6px; overflow: hidden; }
+.contact-form-header { padding: 1rem 1.5rem; background: var(--paper-mid); border-bottom: 0.5px solid var(--paper-dark); font-size: 12px; font-weight: 400; color: var(--ink-light); letter-spacing: 0.06em; }
+.contact-form-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.cf-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.cf-label { font-size: 11px; font-weight: 400; letter-spacing: 0.08em; color: var(--ink-light); }
+select, input[type="text"], input[type="email"], textarea { width: 100%; background: #fff; border: 0.5px solid var(--paper-dark); border-radius: 3px; padding: 0.75rem 1rem; font-size: 14px; font-family: var(--font); font-weight: 300; color: var(--ink); outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+input:focus, textarea:focus, select:focus { border-color: var(--ink-light); }
+textarea { min-height: 120px; resize: vertical; line-height: 1.8; }
+.contact-submit { display: block; width: 100%; padding: 1rem; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 400; letter-spacing: 0.1em; text-align: center; border-radius: 4px; cursor: pointer; border: none; font-family: var(--font); transition: opacity 0.2s; }
+.contact-submit:hover { opacity: 0.75; }
+.contact-done { display: none; padding: 2rem; text-align: center; font-size: 14px; color: var(--ink-light); line-height: 1.8; }
+@media (max-width: 600px) {
+  .about-hero, .concept-section, .profile-section, .contact-section { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .about-hero { padding-top: 4rem; padding-bottom: 3.5rem; }
+  .profile-inner { flex-direction: column; gap: 1.25rem; }
+}
+</style>
+
+<div class="about-hero fade-in">
+  <div class="about-eyebrow">About</div>
+  <p class="about-lead">日本の山は、都市の生活と<br>深く繋がっている。<br>でも、その繋がりはほとんど<br>見えていない。</p>
+</div>
+
+<div class="concept-section fade-in">
+  <p>日本の国土の約7割は山だ。その山から流れ出る水が川になり、海に注ぎ、魚を育てる。山の木が伐られ、建物になり、家具になり、都市の暮らしを支えている。私たちは山なしでは生きていけないのに、山のことを他人事として捉えてしまっている。</p>
+  <p>その対岸の火事状態を変えたくて、<strong>UNDERCURRENT</strong>を始めた。</p>
+  <p>説教くさくはやりたくなかった。「山が大変です」という入口からではなく、建築、デザイン、プロダクト、歴史——自分たちが面白いと思うものを入口にして、気づいたら山の話になっていた、という体験を作りたかった。</p>
+  <p>コンテンツを作るだけでなく、求人情報や空き家情報を通じて、山に関わる人と場所と仕事を都市と繋げていきたい。</p>
+</div>
+
+<div class="profile-section fade-in">
+  <div class="section-label-sm">Editor</div>
+  <div class="profile-inner">
+    <div class="profile-avatar">photo</div>
+    <div>
+      <div class="profile-name">お名前</div>
+      <div class="profile-name-en">Your Name</div>
+      <div class="profile-bio">インテリア関係の仕事をしながら、デザインと山の繋がりを探り続けている。UNDERCURRENTを一人で編集・運営している。</div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section fade-in">
+  <div class="section-label-sm">Contact</div>
+  <p class="contact-intro">広告掲載・タイアップ、取材・インタビュー依頼、求人・物件の掲載依頼、その他お問い合わせはこちらから。</p>
+  <div class="contact-types">
+    <div class="contact-type"><div class="contact-type-name">広告・タイアップ</div><div class="contact-type-desc">メディアのテーマに沿った広告掲載、スポンサード記事、タイアップ企画のご相談。</div></div>
+    <div class="contact-type"><div class="contact-type-name">取材・執筆依頼</div><div class="contact-type-desc">林業・製材・建築・木工など山に関わる現場への取材依頼、外部への寄稿・執筆のご相談。</div></div>
+    <div class="contact-type"><div class="contact-type-name">求人掲載</div><div class="contact-type-desc">林業・製材・森林管理・木工など山に関わる仕事の求人掲載依頼。</div></div>
+    <div class="contact-type"><div class="contact-type-name">物件掲載</div><div class="contact-type-desc">残す価値のある空き家・古民家の掲載依頼。</div></div>
+    <div class="contact-type"><div class="contact-type-name">その他</div><div class="contact-type-desc">上記以外のご相談・ご連絡はお気軽にどうぞ。</div></div>
+  </div>
+  <div class="contact-form-wrap" id="contact-wrap">
+    <div class="contact-form-header">お問い合わせフォーム</div>
+    <div class="contact-form-body">
+      <div class="cf-field"><label class="cf-label">お問い合わせ種別</label><select id="contact-type"><option value="">選択してください</option><option>広告・タイアップ</option><option>取材・執筆依頼</option><option>求人掲載</option><option>物件掲載</option><option>その他</option></select></div>
+      <div class="cf-field"><label class="cf-label">お名前 / 会社名</label><input type="text" placeholder="山田 太郎 / 株式会社〇〇"></div>
+      <div class="cf-field"><label class="cf-label">メールアドレス</label><input type="email" placeholder="your@email.com"></div>
+      <div class="cf-field"><label class="cf-label">お問い合わせ内容</label><textarea placeholder="お問い合わせの内容をご記入ください。"></textarea></div>
+      <button class="contact-submit" id="contact-submit">送信する</button>
+    </div>
+    <div class="contact-done" id="contact-done">お問い合わせありがとうございます。内容を確認の上、3営業日以内にご連絡いたします。</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('contact-submit')?.addEventListener('click', () => {
+    const body = document.querySelector('.contact-form-body') as HTMLElement;
+    const done = document.getElementById('contact-done');
+    if (body) body.style.display = 'none';
+    if (done) done.style.display = 'block';
+  });
+</script>
+</Layout>
