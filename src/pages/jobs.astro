@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="山の仕事">
 <style is:global>
+.page-header { max-width: var(--wide); margin: 0 auto; padding: 4rem 1.25rem 3rem; border-bottom: 0.5px solid var(--paper-dark); }
+.page-eyebrow { font-size: 10px; font-weight: 400; letter-spacing: 0.18em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.75rem; }
+.page-title { font-size: clamp(28px,4vw,44px); font-weight: 400; color: var(--ink); letter-spacing: 0.06em; line-height: 1.3; margin-bottom: 1.25rem; }
+.page-desc { font-size: 15px; font-weight: 300; color: var(--ink-light); line-height: 1.9; max-width: 560px; letter-spacing: 0.02em; }
+.page-count { margin-top: 1.5rem; font-size: 11px; color: var(--ink-faint); letter-spacing: 0.08em; }
 .job-list { max-width: var(--wide); margin: 0 auto; padding: 0 0 6rem; }
 .job-card { display: grid; grid-template-columns: 320px 1fr; border-bottom: 0.5px solid var(--paper-dark); cursor: pointer; transition: background 0.2s; }
 .job-card:hover { background: var(--paper-mid); }
@@ -24,6 +29,7 @@ import Layout from '../layouts/Layout.astro';
 .job-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
 .job-read-more { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 2px; width: fit-content; transition: color 0.2s; }
 .job-card:hover .job-read-more { color: var(--ink); border-color: var(--ink-light); }
+@media (max-width: 600px) { .page-header { padding: 2.5rem 1.25rem 2rem; } }
 @media (max-width: 720px) {
   .job-card { grid-template-columns: 1fr; }
   .job-img { aspect-ratio: 16/9; }
