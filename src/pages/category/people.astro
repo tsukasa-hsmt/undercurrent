@@ -29,6 +29,11 @@ import Layout from '../../layouts/Layout.astro';
 .list-meta { display: flex; align-items: flex-end; gap: 6px; flex-wrap: wrap; margin-top: auto; }
 .list-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-left: auto; }
 
+.card-meta { justify-content: space-between; align-items: center; gap: 0; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.card-detail { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 1px; white-space: nowrap; transition: color 0.2s; }
+.article-card:hover .card-detail { color: var(--ink); border-color: var(--ink-light); }
+
 @media (max-width: 900px) { .article-grid-cat { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) {
   .page-header { padding: 2.5rem 1.25rem 2rem; }
@@ -51,7 +56,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">岐阜の製材所で聞いた、山が静かになった理由</div>
       <div class="card-lead">人口2000人の山間の町に、三代続く製材所がある。その三代目が語った、山の現在地。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span><span class="card-date">2024.02.10</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -59,7 +64,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">大工が木を選ぶとき、何を見ているか</div>
       <div class="card-lead">木材を手で触れ、目で確かめる。熟練の大工が語る「良い木」の条件は、山の管理状態と直結していた。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">職人</span><span class="card-date">2024.01.22</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">職人</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -67,7 +72,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">山を歩くだけが仕事じゃない。森林官の1日</div>
       <div class="card-lead">書類、調査、地権者との交渉——森林官の仕事は、山の中よりも事務所で過ごす時間の方が長い。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span><span class="card-date">2024.01.05</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -75,7 +80,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">移住して林業を始めた28歳の話</div>
       <div class="card-lead">東京のデザイン事務所を辞め、長野の山へ。移住から2年、彼が見つけたものと、まだ見えていないもの。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">山</span><span class="card-date">2023.12.20</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">山</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -83,7 +88,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">木を売る人と、木を買う人の間に立つ仕事</div>
       <div class="card-lead">木材市場のせり人は、山と工務店の橋渡し役だ。その目利きの仕事と、変わりゆく木材流通の話。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">木材</span><span class="card-date">2023.11.15</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">木材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -91,7 +96,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">吉野の山師に、吉野杉の話を聞いた</div>
       <div class="card-lead">400年の歴史を持つ吉野の林業。四代目の山師が語る、受け継いだもの、変えようとしているもの。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span><span class="card-date">2023.10.30</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">林業</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -99,7 +104,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">木工家・山口恭介のアトリエを訪ねた</div>
       <div class="card-lead">奈良の古民家に構えたアトリエで、山口は国産材だけを使い続けている。その理由を、静かに語った。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">素材</span><span class="card-date">2023.09.22</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">人</span><span class="tag-link tag-issue">素材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
 </div>

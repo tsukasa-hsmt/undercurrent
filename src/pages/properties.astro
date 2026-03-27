@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 .prop-img { overflow: hidden; background: var(--paper-dark); aspect-ratio: 4/3; }
 .prop-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
 .prop-body { padding: 2rem 2rem 2rem 2.5rem; display: flex; flex-direction: column; border-left: 0.5px solid var(--paper-dark); }
-.prop-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0.875rem; }
+.prop-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .prop-tag { font-size: 10px; font-weight: 400; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 2px; }
 .prop-tag-area { background: var(--paper-mid); color: var(--ink-light); border: 0.5px solid var(--paper-dark); }
 .prop-tag-type { background: var(--ink); color: var(--paper); }
@@ -22,7 +22,8 @@ import Layout from '../layouts/Layout.astro';
 .prop-spec-label { font-size: 10px; letter-spacing: 0.1em; color: var(--ink-faint); text-transform: uppercase; margin-bottom: 4px; }
 .prop-spec-value { font-size: 14px; font-weight: 400; color: var(--ink-mid); }
 .prop-spec-sub { font-size: 11px; color: var(--ink-faint); margin-top: 1px; }
-.prop-read-more { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); margin-top: 1.25rem; border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 2px; width: fit-content; transition: color 0.2s; }
+.prop-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
+.prop-read-more { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 2px; width: fit-content; transition: color 0.2s; }
 .property-card:hover .prop-read-more { color: var(--ink); border-color: var(--ink-light); }
 @media (max-width: 760px) {
   .property-card { grid-template-columns: 1fr; }
@@ -45,7 +46,6 @@ import Layout from '../layouts/Layout.astro';
   <a href="#" class="property-card fade-in">
     <div class="prop-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=70" alt=""></div>
     <div class="prop-body">
-      <div class="prop-tags"><span class="prop-tag prop-tag-area">岐阜県</span><span class="prop-tag prop-tag-type">古民家</span></div>
       <div class="prop-title">製材所の隣に建つ、<br>明治期の庄屋屋敷</div>
       <div class="prop-story">岐阜県郡上市、長良川の支流沿いに建つ庄屋屋敷。明治30年代の建築で、地元産ヒノキをふんだんに使った梁と柱が今も健在だ。</div>
       <div class="prop-specs">
@@ -53,13 +53,15 @@ import Layout from '../layouts/Layout.astro';
         <div class="prop-spec"><div class="prop-spec-label">延床面積</div><div class="prop-spec-value">248㎡</div><div class="prop-spec-sub">母屋のみ</div></div>
         <div class="prop-spec"><div class="prop-spec-label">築年数</div><div class="prop-spec-value">築約120年</div><div class="prop-spec-sub">明治30年代</div></div>
       </div>
-      <span class="prop-read-more">詳しく見る</span>
+      <div class="prop-footer">
+        <div class="prop-tags"><span class="prop-tag prop-tag-area">岐阜県</span><span class="prop-tag prop-tag-type">古民家</span></div>
+        <span class="prop-read-more">詳しく見る</span>
+      </div>
     </div>
   </a>
   <a href="#" class="property-card fade-in">
     <div class="prop-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70" alt=""></div>
     <div class="prop-body">
-      <div class="prop-tags"><span class="prop-tag prop-tag-area">長野県</span><span class="prop-tag prop-tag-type">古民家</span></div>
       <div class="prop-title">諏訪湖を望む丘に建つ、<br>大正期の木造住宅</div>
       <div class="prop-story">長野県諏訪市の高台に建つ大正期の木造2階建て。諏訪湖を一望できる立地で、当時の建築家による設計が随所に見られる。</div>
       <div class="prop-specs">
@@ -67,7 +69,10 @@ import Layout from '../layouts/Layout.astro';
         <div class="prop-spec"><div class="prop-spec-label">延床面積</div><div class="prop-spec-value">132㎡</div><div class="prop-spec-sub">2階建て</div></div>
         <div class="prop-spec"><div class="prop-spec-label">築年数</div><div class="prop-spec-value">築約100年</div><div class="prop-spec-sub">大正期</div></div>
       </div>
-      <span class="prop-read-more">詳しく見る</span>
+      <div class="prop-footer">
+        <div class="prop-tags"><span class="prop-tag prop-tag-area">長野県</span><span class="prop-tag prop-tag-type">古民家</span></div>
+        <span class="prop-read-more">詳しく見る</span>
+      </div>
     </div>
   </a>
 </div>

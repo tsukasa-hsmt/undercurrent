@@ -29,6 +29,11 @@ import Layout from '../../layouts/Layout.astro';
 .list-meta { display: flex; align-items: flex-end; gap: 6px; flex-wrap: wrap; margin-top: auto; }
 .list-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-left: auto; }
 
+.card-meta { justify-content: space-between; align-items: center; gap: 0; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.card-detail { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 1px; white-space: nowrap; transition: color 0.2s; }
+.article-card:hover .card-detail { color: var(--ink); border-color: var(--ink-light); }
+
 @media (max-width: 900px) { .article-grid-cat { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) {
   .page-header { padding: 2.5rem 1.25rem 2rem; }
@@ -51,7 +56,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">江戸の建築を支えた、奥多摩の森の話</div>
       <div class="card-lead">現代の住宅地として知られる奥多摩は、かつて江戸の建築需要を支えた木材の産地だった。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">山</span><span class="card-date">2024.02.28</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">山</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -59,7 +64,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">木曽ヒノキ、その盛衰と現在</div>
       <div class="card-lead">かつて「木曽のヒノキは幕府の御用材」と呼ばれた。過剰伐採と保護の歴史が、現代の木曽の山を作った。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">木材</span><span class="card-date">2024.01.15</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">木材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -67,7 +72,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">明治の製材業が日本の山を変えた</div>
       <div class="card-lead">蒸気鋸の導入により、日本の製材業は劇的に変わった。その変化が森に何をもたらしたのか。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">林業</span><span class="card-date">2023.12.10</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">林業</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -75,7 +80,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">吉野杉400年の歴史を歩く</div>
       <div class="card-lead">吉野の山に杉が植えられたのは江戸初期。400年にわたる人工林の歴史は、日本最長の林業史でもある。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">山</span><span class="card-date">2023.10.25</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">山</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -83,7 +88,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">尾鷲ヒノキと海運、近代日本の木材流通史</div>
       <div class="card-lead">紀伊半島の尾鷲から木材が大阪へ。海の道を使った木材流通が、近代日本の都市建設を支えた。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">木材</span><span class="card-date">2023.09.12</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">歴史</span><span class="tag-link tag-issue">木材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
 </div>

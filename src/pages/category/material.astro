@@ -29,6 +29,11 @@ import Layout from '../../layouts/Layout.astro';
 .list-meta { display: flex; align-items: flex-end; gap: 6px; flex-wrap: wrap; margin-top: auto; }
 .list-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-left: auto; }
 
+.card-meta { justify-content: space-between; align-items: center; gap: 0; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.card-detail { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 1px; white-space: nowrap; transition: color 0.2s; }
+.article-card:hover .card-detail { color: var(--ink); border-color: var(--ink-light); }
+
 @media (max-width: 900px) { .article-grid-cat { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) {
   .page-header { padding: 2.5rem 1.25rem 2rem; }
@@ -51,7 +56,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">スギとヒノキ、何が違うのか</div>
       <div class="card-lead">日本の人工林の大半を占める2種。建材としての特性、香り、産地ごとの違いを、材木屋の視点で整理する。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">木材</span><span class="card-date">2024.03.01</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">木材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -59,7 +64,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">国産ナラ材の復権</div>
       <div class="card-lead">かつては輸出材として重宝されたナラ材が、今また国内で見直されている。その背景と、使い手の声。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">山</span><span class="card-date">2024.01.18</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">山</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -67,7 +72,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">クリ材が選ばれる理由——耐水性と美しさ</div>
       <div class="card-lead">土台材として長年使われてきたクリ。その耐水性と独特の木目が、今の建築家や作家たちを引きつけている。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">建築</span><span class="card-date">2023.11.05</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">素材</span><span class="tag-link tag-issue">建築</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
 </div>

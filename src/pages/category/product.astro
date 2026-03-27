@@ -29,6 +29,11 @@ import Layout from '../../layouts/Layout.astro';
 .list-meta { display: flex; align-items: flex-end; gap: 6px; flex-wrap: wrap; margin-top: auto; }
 .list-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; margin-left: auto; }
 
+.card-meta { justify-content: space-between; align-items: center; gap: 0; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.card-detail { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 1px; white-space: nowrap; transition: color 0.2s; }
+.article-card:hover .card-detail { color: var(--ink); border-color: var(--ink-light); }
+
 @media (max-width: 900px) { .article-grid-cat { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 600px) {
   .page-header { padding: 2.5rem 1.25rem 2rem; }
@@ -51,7 +56,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">この椅子の木材は、どこから来たのか</div>
       <div class="card-lead">東京のあるインテリアショップで出会った一脚の椅子。その木材の産地を辿ると、岐阜の山奥に行き着いた。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">木材</span><span class="card-date">2024.03.15</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">木材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -59,7 +64,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">国産材の箸と、職人の手仕事</div>
       <div class="card-lead">吉野杉の端材が箸になる。奈良の小さな工房で続けられてきた手仕事は、山との静かな対話だ。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">職人</span><span class="card-date">2024.01.30</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">職人</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -67,7 +72,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">山の木がテーブルになるまで</div>
       <div class="card-lead">伐採から製材、乾燥、加工——一枚のテーブルに至るまでの時間と工程を、長野の木工作家が語る。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">林業</span><span class="card-date">2023.11.20</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">林業</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
   <a href="#" class="article-card fade-in">
@@ -75,7 +80,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="card-body">
       <div class="card-title">木工作家が語る、素材との対話</div>
       <div class="card-lead">木に向き合い、木の声を聞く。岐阜を拠点に活動する木工作家・三浦誠のものづくりの哲学。</div>
-      <div class="card-meta"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">素材</span><span class="card-date">2023.10.05</span></div>
+      <div class="card-meta"><div class="card-tags"><span class="tag-link tag-entry">プロダクト</span><span class="tag-link tag-issue">素材</span></div><span class="card-detail">詳細</span></div>
     </div>
   </a>
 </div>
