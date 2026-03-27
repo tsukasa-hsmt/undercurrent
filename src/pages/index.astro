@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">江戸の建築を支えた、奥多摩の森の話</div>
         <div class="card-lead">現代の住宅地として知られる奥多摩は、かつて江戸の建築需要を支えた木材の産地だった。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">山</span><span class="card-date">2024.02.28</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">山</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
     <a href="/category/people" class="article-card">
@@ -42,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">岐阜の製材所で聞いた、山が静かになった理由</div>
         <div class="card-lead">人口2000人の山間の町に、三代続く製材所がある。その三代目が語った、山の現在地。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">人</span><span class="tsm tsm-issue">林業</span><span class="card-date">2024.02.10</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">人</span><span class="tsm tsm-issue">林業</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
     <a href="/category/architecture" class="article-card">
@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">CLTが変えようとしているもの、変えられないもの</div>
         <div class="card-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span><span class="card-date">2024.01.22</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
   </div>
@@ -66,31 +66,31 @@ import Layout from '../layouts/Layout.astro';
     <a href="/jobs" class="job-pickup-item">
       <div class="jp-img"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=70" alt=""></div>
       <div class="jp-body">
-        <div class="jp-tags"><span class="jp-tag jp-tag-type">林業</span><span class="jp-tag jp-tag-area">岐阜県</span></div>
         <div class="jp-org">有限会社 奥山林業</div>
         <div class="jp-title">木を育て、山を守る。林業作業士を募集</div>
         <div class="jp-story">「木を切る仕事だと思って来たら、木を育てる仕事だった」——ここで働くスタッフが口を揃えて言う。</div>
         <div class="jp-location">岐阜県郡上市 / 月給 22万円〜</div>
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">林業</span><span class="jp-tag jp-tag-area">岐阜県</span></div>
       </div>
     </a>
     <a href="/jobs" class="job-pickup-item">
       <div class="jp-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=400&q=70" alt=""></div>
       <div class="jp-body">
-        <div class="jp-tags"><span class="jp-tag jp-tag-type">製材</span><span class="jp-tag jp-tag-area">長野県</span></div>
         <div class="jp-org">丸木製材所</div>
         <div class="jp-title">木の声を聞く職人。製材スタッフ募集</div>
         <div class="jp-story">丸太が板になる瞬間がある。鋸が入り、木目が現れる。その瞬間に立ち会える仕事が製材だ。</div>
         <div class="jp-location">長野県諏訪市 / 月給 20万円〜</div>
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">製材</span><span class="jp-tag jp-tag-area">長野県</span></div>
       </div>
     </a>
     <a href="/jobs" class="job-pickup-item">
       <div class="jp-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=70" alt=""></div>
       <div class="jp-body">
-        <div class="jp-tags"><span class="jp-tag jp-tag-type">森林管理</span><span class="jp-tag jp-tag-area">奈良県</span></div>
         <div class="jp-org">吉野林業組合</div>
         <div class="jp-title">400年の山と向き合う。森林施業プランナー募集</div>
         <div class="jp-story">吉野杉は日本を代表するブランド材だ。その山を未来に繋いでいくために、橋渡しをする人を求めている。</div>
         <div class="jp-location">奈良県吉野郡 / 月給 25万円〜</div>
+        <div class="jp-tags"><span class="jp-tag jp-tag-type">森林管理</span><span class="jp-tag jp-tag-area">奈良県</span></div>
       </div>
     </a>
   </div>
@@ -106,25 +106,25 @@ import Layout from '../layouts/Layout.astro';
     <a href="/properties" class="prop-pickup-card">
       <div class="pp-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=70" alt=""></div>
       <div class="pp-body">
-        <div class="pp-tags"><span class="pp-tag pp-tag-area">岐阜県</span><span class="pp-tag pp-tag-type">古民家</span></div>
         <div class="pp-title">製材所の隣に建つ、明治期の庄屋屋敷</div>
         <div class="pp-price">580万円<span class="pp-price-note">要リノベーション</span></div>
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">岐阜県</span><span class="pp-tag pp-tag-type">古民家</span></div>
       </div>
     </a>
     <a href="/properties" class="prop-pickup-card">
       <div class="pp-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=70" alt=""></div>
       <div class="pp-body">
-        <div class="pp-tags"><span class="pp-tag pp-tag-area">長野県</span><span class="pp-tag pp-tag-type">古民家</span></div>
         <div class="pp-title">諏訪湖を望む丘に建つ、大正期の木造住宅</div>
         <div class="pp-price">320万円<span class="pp-price-note">現状渡し</span></div>
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">長野県</span><span class="pp-tag pp-tag-type">古民家</span></div>
       </div>
     </a>
     <a href="/properties" class="prop-pickup-card">
       <div class="pp-img"><img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800&q=70" alt=""></div>
       <div class="pp-body">
-        <div class="pp-tags"><span class="pp-tag pp-tag-area">奈良県</span><span class="pp-tag pp-tag-type">町家</span></div>
         <div class="pp-title">吉野杉の町並みに残る、江戸末期の商家</div>
         <div class="pp-price">450万円<span class="pp-price-note">要一部補修</span></div>
+        <div class="pp-tags"><span class="pp-tag pp-tag-area">奈良県</span><span class="pp-tag pp-tag-type">町家</span></div>
       </div>
     </a>
   </div>
@@ -142,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">大工が木を選ぶとき、何を見ているか</div>
         <div class="card-lead">木材を手で触れ、目で確かめる。熟練の大工が語る「良い木」の条件は、山の管理状態と直結していた。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">職人</span><span class="card-date">2024.01.22</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">職人</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
     <a href="/category/architecture" class="article-card">
@@ -150,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">CLTが変えようとしているもの、変えられないもの</div>
         <div class="card-lead">直交集成板（CLT）は国産材の新たな活路として注目される。しかし現場に聞くと、課題はまだ山積している。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span><span class="card-date">2024.01.08</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">木材</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
     <a href="/category/architecture" class="article-card">
@@ -158,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="card-body">
         <div class="card-title">数寄屋建築と山の関係——茶室が求めた木とは</div>
         <div class="card-lead">侘び寂びを体現する数寄屋建築。その繊細な意匠を支えていたのは、特定の山の特定の木だった。</div>
-        <div class="card-meta"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">歴史</span><span class="card-date">2023.12.18</span></div>
+        <div class="card-meta"><div class="card-tags"><span class="tsm tsm-entry">建築</span><span class="tsm tsm-issue">歴史</span></div><span class="card-detail">詳細</span></div>
       </div>
     </a>
   </div>
@@ -177,6 +177,15 @@ import Layout from '../layouts/Layout.astro';
     <a href="/category/material" class="cat-item"><div class="cat-name">素材</div><div class="cat-desc">木の種類、産地、質感の話</div><div class="cat-count">3 articles</div></a>
   </div>
 </div>
+
+<style is:global>
+  .card-meta { justify-content: space-between; align-items: center; gap: 0; }
+  .card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card-detail { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-faint); border-bottom: 0.5px solid var(--paper-dark); padding-bottom: 1px; white-space: nowrap; transition: color 0.2s; }
+  .article-card:hover .card-detail { color: var(--ink); border-color: var(--ink-light); }
+  .jp-tags { margin-bottom: 0; margin-top: 0.75rem; }
+  .pp-tags { margin-bottom: 0; margin-top: 0.75rem; }
+</style>
 
 <script>
   // ヘッダー透過（ヒーロー上のみ）
